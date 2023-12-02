@@ -17,6 +17,10 @@ Install rasa:
 
 - pip install rasa
 
+Train rasa model:
+
+- rasa train
+
 Run rasa action server:
 
 - rasa run actions
