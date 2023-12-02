@@ -140,7 +140,6 @@ def resolveProductMention(tracker:Tracker) -> dict:
     :return: the id of the actual entity (value of key attribute in the knowledge base)
     """
     mention = tracker.get_slot("mention")
-    print(mention)
     listed_products = tracker.get_slot("listed_products")
 
     if mention is not None and listed_products is not None:
@@ -313,9 +312,9 @@ class searchProduct(Action):
                 message_response = message_response + str(count) + ". " + product['name'] + " - Giá gốc: " + changeCurrencyFormat(product["price"]) + ". Hiện đang giảm giá còn: " + changeCurrencyFormat(product["priceDiscount"]) + "\n"  
             else: 
                 message_response = message_response + str(count) + ". " + product['name'] + " - Giá: " + changeCurrencyFormat(product["price"]) + "\n" 
-            productIds.append(int(product["id"]))
+            productIds.append(product['id'])
             count += 1
-        response = {"message": message_response, "products": productIds}
+        response = {"message": message_response, "products": productIds, "product_keyword": product_keyword}
         dispatcher.utter_message(json.dumps(response,ensure_ascii=False))
       
         # Clear product_keywrod slot, Add items to list_product slots
