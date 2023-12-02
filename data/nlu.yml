@@ -1,0 +1,255 @@
+version: "3.1"
+
+nlu:
+  - intent: chat/greet
+    examples: |
+      - Xin chào
+      - Chào bạn
+      - Chào anh 
+      - Chào chị
+      - Chào bạn nhé
+      - Rất vui được gặp bạn
+      - Chào
+      - Chào buổi sáng
+      - Chào buổi trưa
+      - Chào buổi chiều
+      - hello 
+      - hi
+
+  - intent: chat/goodbye
+    examples: |
+      - bai
+      - bai bai
+      - bye
+      - bye bye
+      - g9
+      - Chào tạm biệt
+      - Tạm biệt nhé
+      - Tạm biệt
+
+  - intent: chat/introduce
+    examples: |
+      - Bạn là ai?
+      - Tôi đang nói chuyện với ai vậy?
+      - Bạn là người hay bot?
+      - Ai vậy
+      - Xin cho hỏi đây là Ai
+      - bạn là gì?
+      - ai đấy
+      - giới thiệu về bạn
+
+  - intent: chat/no_prob
+    examples: |
+      - Cảm ơn bạn
+      - Cảm ơn nhé
+      - Thanks
+      - Thank you
+      - Rất có ích
+
+  - intent: faq/payment_method
+    examples: |
+      - Phương thức thanh toán của cửa hàng 
+      - Cho tôi xem phương thức thanh toán của cửa hàng 
+      - Có thể thanh toán bằng những hình thức nào? 
+      - Có thể thanh toán bằng momo được không?
+      - Cửa hàng có hỗ trợ thanh toán bằng VNPay?
+      - Có thể thanh toán qua tài khoản ngân hàng không?
+      - Tôi muốn thanh toán qua ví trực tuyến
+      - Có thể chuyển khoản ngân hàng được không?
+
+  - intent: faq/calculate_shipping_fee
+    examples: |
+      - Về cách tính phí vận chuyển
+      - Cách tính phí vận chuyển
+      - Phí vận chuyển được tính như thế nào
+      - Phí ship được tính ra sao?
+      - MTFood tính phí vận chuyển như thế nào?
+      - Doanh nghiệp tính toán phí giao hàng như thế nào
+      - Cách tính phí giao hàng
+
+  - intent: faq/shippping_method
+    examples: |
+      - Các phương thức vận chuyển của cửa hàng
+      - Cửa hàng có các cách vận chuyển nào?
+      - về dịch vụ vận chuyển của cửa hàng
+      - Doanh nghiệp có những hình thức vận chuyển nào
+      - Các hình thức ship của doanh nghiệp
+      - Có các loại hình ship nào?
+      - các loại giao hàng
+      - Hỗ trợ giao hàng như thế nào?
+
+  - intent: faq/about
+    examples: |
+      - Giới thiệu về cửa hàng?
+      - Cửa hàng bán gì?
+      - Đây là gì
+      - Giới thiệu về MTFood
+      - vui lòng giới thiệu về trang web 
+      - Thông tin của cửa hàng
+      - Thông tin về doanh nghiệp
+      - Giới thiệu doanh nghiệp
+
+  - intent: faq/policies_services
+    examples: |
+      - Chính sách và dịch vụ của doanh nghiệp?
+      - Xem thông tin về chính sách của MTFood
+      - cửa hàng có các chính sách gì?
+      - Web có các dịch vụ gì
+      - Xem các điều khoản của doanh nghiệp
+      - Xem thông tin chi tiết về dịch vụ
+      - Tìm kiếm thông tin về chính sách
+
+  - intent: faq/policy_return
+    examples: |
+      - Chính sách đổi trả sản phẩm
+      - Tôi muốn đổi trả sản phẩm 
+      - Tôi muốn hoàn lại đơn hàng
+      - Tôi muốn đổi đơn hàng đã mua 
+      - Tôi cần trả đơn hàng đã giao 
+      - Trả không mua sản phẩm nữa
+
+  - intent: faq/policy_personal_information
+    examples: |
+      - thông tin cá nhân của tôi có được bảo mật không?
+      - chính sách bảo mật thông tin cá nhân
+      - Doanh nghiệp có làm lộ thông tin của khách hàng
+      - Thông tin của tôi có bị lộ không
+      - Xem chi tiết về chính sách thông tin cá nhân của tôi
+
+  - intent: deny
+    examples: |
+      - Không
+      - Không phải
+      - Sai 
+      - Sai rồi
+      - Không đúng 
+      - Không 
+      - Không đúng rồi
+      - No 
+      - N
+
+  - intent: affirm
+    examples: |
+      - Đúng
+      - Đúng rồi
+      - chính xác
+      - đúng vậy
+      - Yes
+      - Y
+      - Xác thực
+      - Xác nhận
+      - Tôi đồng ý
+      - đồng ý
+      - Không sai
+
+  - intent: out_of_scope
+    examples: |
+      - Cách chế biến gà rán
+      - 2+2 bằng mấy
+      - Chủ tịch nước Việt Nam là ai?
+      - bla bla
+      - bluh bluh
+
+  - intent: request_search_product
+    examples: |
+      - Tìm kiếm sản phẩm
+      - Tìm kiếm sản phẩm  [bánh tráng trộn](product_keyword)
+      - Tôi muốn tìm kiếm sản phẩm
+      - Xem thông tin sản phẩm
+      - Tôi muốn tìm kiếm sản phẩm [bánh](product_keyword)
+      - Tìm sp [bánh tráng](product_keyword)
+      - Tìm sp [khô gà](product_keyword)
+      - Tìm sp [bánh ngọt nabati](product_keyword)
+      - Tìm sản phẩm [snack mix nhiều vị](product_keyword)
+      - Tìm sản phẩm [khô gà lá chanh](product_keyword)
+      - Tìm sản phẩm [cơm gà xối mỡ](product_keyword)
+      - Tìm sản phẩm [khô mực rim mắm tỏi](product_keyword)
+      - sản phẩm [khô gà sấy](product_keyword)
+      - sản phẩm [khô cá sậy](product_keyword)
+      - Tìm [mít sấy khô](product_keyword)
+      - Tìm [bánh quy](product_keyword)
+      - Tìm [mực][product_keyword]
+      - Tìm [gà](product_keyword]
+      - Tìm [Khoai Lang Sấy Mắm Hành](product_keyword)
+      - Tìm kiếm sản phẩm [Kẹo Sỏi Nhân Socola](product_keyword)
+      - xem sản phẩm [Đậu Phộng Da Cá Tỏi Ớt](product_keyword)
+      - [Cơm Cháy Siêu Chà Bông](product_keyword)
+      - [Chuối sấy mè gừng](product_keyword)
+      - [Cá nướng][product_keyword]
+      - [Khô](product_keyword)
+      - sp [khô gà](product_keyword)
+      - sp [khô gà sợi ngắn](product_keyword)
+      - sản phẩm [Bột Đậu Nành](product_keyword)
+      - [Bim bim](product_keyword)
+      - Xem sp [Bánh tráng phơi sương](product_keyword)
+      - [Bánh pía sầu riêng](product_keyword)
+      - [nho vàng](product_keyword)
+
+  - intent: request_search_order
+    examples: |
+      - xem thông tin đơn hàng
+      - tôi cần xem chi tiết đơn hàng của tôi
+      - Chi tiết các đơn hàng của tôi
+      - Xem tình trạng hiện tại của đơn hàng
+      - Đơn hàng đã được vận chuyển đến đâu
+      - Tìm kiếm đơn hàng hiện tại
+      - Đơn hàng của tôi
+      - Xem đơn hàng
+      - Tìm đơn hàng
+      - Tìm đơn của tôi
+      - Xem đơn của tôi
+      - tôi muốn kiểm tra thông tin đơn hàng của tôi
+
+  - intent: request_mention
+    examples: |
+      - Xem sp [đầu](mention) tiên
+      - Sản phẩm trên [đầu](mention)
+      - Sản phẩm [dưới](mention)
+      - sp [trên](mention) cùng
+      - Xem sp thứ [nhất](mention)
+      - thông tin chi tiết sản phẩm thứ [hai](mention)
+      - thông tin của sản phẩm thứ [ba](mention)
+      - tôi muốn xem giá của sản phẩm thứ [tư](mention)
+      - tôi muốn xem sản phẩm thứ [năm](mention)
+      - xem sản phẩm [cuối](mention) cùng
+      - xem sp [dưới](mention) cùng
+      - sp [một](mention)
+      - sản phẩm [hai](mention)
+      - sản phẩm [ba](mention)
+      - sản phẩm [bốn](mention)
+      - sản phẩm [năm](mention)
+      - sản phẩm [cuối](mention)
+      - [1](mention)
+      - [2](mention)
+      - [3](mention)
+      - [4](mention)
+      - [5](mention)
+      - [một](mention)
+      - [hai](mention)
+      - [ba](mention)
+      - [bốn](mention)
+      - [năm](mention)
+      - Xem đơn hàng [đầu](mention) tiên
+      - Đơn hàng [cuối](mention) cùng
+
+  - lookup: mention
+    examples: |
+      - đầu
+      - cuối
+      - trên
+      - dưới
+      - một
+      - hai
+      - ba
+      - bốn
+      - năm
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - nhất
+      - nhì
+      - tam
+      - tứ
+      - ngũ

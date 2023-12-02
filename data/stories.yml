@@ -1,0 +1,19 @@
+version: "3.1"
+
+stories:
+  - story: chat path
+    steps:
+      - intent: chat
+      - action: utter_chat
+
+  - story: faq path
+    steps:
+      - intent: faq
+      - action: utter_faq
+
+  - story: chat and faq
+    steps:
+      - intent: chat
+      - action: utter_chat
+      - intent: faq
+      - action: utter_faq
