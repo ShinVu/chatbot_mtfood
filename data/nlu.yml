@@ -253,3 +253,7 @@ nlu:
       - tam
       - tứ
       - ngũ
+
+  # - lookup: product_keyword
+  #   files: |
+  #     - data/productKeyword.txt

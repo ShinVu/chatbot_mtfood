@@ -471,15 +471,14 @@ class action_get_order(Action):
     - Phương thức thanh toán: {order['payment_method']}
     - Tổng thanh toán: {changeCurrencyFormat(order['subtotal'])}
     - Phí vận chuyển: {changeCurrencyFormat(order['shipping_subtotal'])}
-    - Giảm giá vận chuyển: {changeCurrencyFormat(order['shipping_discount'])}
-    - Giảm giá đơn hàng: {changeCurrencyFormat(order['order_discount'])}
+    - Giảm giá đơn hàng: {changeCurrencyFormat(order['voucher_discount'])}
 3. Chi tiết đơn hàng:"""
             for order_detail in order['order_detail']:
                 message_response = message_response + f"""
-- Sản phẩm: {order_detail['product']['name']}, đơn giá: {order_detail['unit_discount']}, số lượng: {order_detail['quantity']}."""
+- Sản phẩm: {order_detail['product']['name']}, đơn giá: {order_detail['unit_discount']}, số lượng: {order_detail['quantity']} sản phẩm."""
             
             orderId = order['id']
-            message_response = message_response + "Nếu bạn có bất kỳ câu hỏi nào khác hoặc cần thêm thông tin, hãy để tôi biết!"
+            message_response = message_response + "\nNếu bạn có bất kỳ câu hỏi nào khác hoặc cần thêm thông tin, hãy để tôi biết!"
             response = {"message": message_response, "order": orderId}
             dispatcher.utter_message(json.dumps(response,ensure_ascii=False))
         

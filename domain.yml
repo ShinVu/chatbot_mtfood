@@ -56,8 +56,12 @@ slots:
       - type: custom
 
 responses:
+  utter_welcome:
+    - text: "Xin chào! Mình là trợ lý AI của bạn tại MTFood. Mình đang phát triển nên không phải lúc nào cũng đúng. Bạn có thể phản hồi để giúp mình cải thiện tốt hơn.\nMình sẵn sàng giúp bạn với câu hỏi về chính sách và tìm kiếm sản phẩm. Hôm nay bạn cần mình hỗ trợ gì hông? ^^"
+
   utter_chat/greet:
     - text: "Xin chào! Tôi là trợ lý mua sắm của bạn. Tôi có thể giúp gì cho bạn hôm nay?"
+
   utter_chat/introduce:
     - text: "Xin chào! Mình là trợ lý AI của bạn tại MTFood. Mình đang phát triển nên không phải lúc nào cũng đúng. Bạn có thể phản hồi để giúp mình cải thiện tốt hơn.\nMình sẵn sàng giúp bạn với câu hỏi về chính sách và tìm kiếm sản phẩm. Hôm nay bạn cần mình hỗ trợ gì hông? ^^"
 
@@ -69,24 +73,34 @@ responses:
 
   utter_faq/payment_method:
     - text: "Tôi có thể giúp bạn với thông tin về các phương thức thanh toán. Bạn có thể thanh toán lại đơn hàng trả trước nhưng chưa giao dịch thành công bằng cách đăng nhập vào tài khoản của bạn, vào mục \"Đơn hàng của tôi\", chọn đơn hàng \"Chờ thanh toán\" và chọn nút \"Thanh toán lại\" và chọn hình thức thanh toán phù hợp.\nNgoài ra, bạn cũng có thể đổi hình thức thanh toán từ trả trước thành thanh toán tiền mặt khi nhận hàng.\nCác phương thức thanh toán khác mà MTFood hỗ trợ bao gồm:\n - Thanh toán sau (COD) - giao hàng và thu tiền tận nơi.\n - Thanh toán online qua momo và ví điện tử Zalopay.\nNếu bạn có bất kỳ câu hỏi cụ thể nào về phương thức thanh toán, hãy cho tôi biết để tôi có thể cung cấp thêm thông tin."
+
   utter_faq/calculate_shipping_fee:
     - text: " Phí vận chuyển tại MTFood được tính dựa trên khối lượng và kích thước đóng gói của các sản phẩm trong đơn hàng, cũng như khoảng cách địa lý giữa địa chỉ nhận hàng và kho của MTFood.\nTổng giá trị đơn hàng đã bao gồm phí vận chuyển (nếu có). Nếu bạn muốn tiết kiệm phí vận chuyển, bạn có thể áp dụng các coupon giảm giá phí vận chuyển\nNếu bạn có bất kỳ câu hỏi cụ thể nào về cách tính phí vận chuyển, hãy cho tôi biết để tôi có thể cung cấp thêm thông tin."
+
   utter_faq/shippping_method:
     - text: "MTFood hiện có các hình thức giao hàng như sau:\n 1.Giao hàng tiêu chuẩn: Áp dụng cho các sản phẩm có thể giao hàng bằng đường bưu điện hoặc dịch vụ giao hàng của MTFood. Thời gian giao hàng và phí vận chuyển sẽ được hiển thị tại bước \"Thanh toán\".\n 2.Giao hàng nhanh: Áp dụng cho các sản phẩm có thể giao hàng trong vòng 2-4 giờ hoặc trong ngày. Thời gian giao hàng và phí vận chuyển sẽ được hiển thị tại bước \"Thanh toán\".\nNếu bạn có bất kỳ câu hỏi cụ thể nào về các hình thức giao hàng tại MTFood, hãy cho tôi biết để tôi có thể cung cấp thêm thông tin."
+
   utter_faq/about:
     - text: "MTFood là trang thương mại điện tử của Việt Nam. MTFood chuyên về cung cấp các sản phẩm đồ ăn, đồ ăn vặt trong nước, ngoài nước. MTFood cam kết mang đến cho khách hàng những trải nghiệm mua sắm trực tuyến tốt nhất với chất lượng sản phẩm đảm bảo, dịch vụ giao hàng nhanh chóng và chính sách bảo hành hợp lý.\nMTFood cũng có nhiều chương trình khuyến mãi hấp dẫn như giảm giá, mã giảm giá, quà tặng kèm và nhiều ưu đãi khác để khách hàng có thể mua sắm với giá trị tốt nhất.\nNếu bạn có bất kỳ câu hỏi cụ thể nào về MTFood, hãy cho tôi biết để tôi có thể giúp bạn thêm thông tin."
+
   utter_faq/policies_services:
     - text: "MTFood có nhiều chính sách và dịch vụ để đảm bảo quyền lợi của khách hàng. Dưới đây là một số chính sách và dịch vụ quan trọng của MTFood:\n1. Chính sách giao hàng\n2. Chính sách đổi trả sản phẩm \n3. Chính sách bảo mật thông tin cá nhân.\n Để biết thêm chi tiết về các chính sách và dịch vụ của MTFood, bạn có thể truy cập vào trang web của MTFood và xem các thông tin chi tiết tại mục \"Điều khoản và dịch vụ\"."
+
   utter_faq/policy_personal_information:
     - text: "Chính sách bảo mật thông tin cá nhân của MTFood cam kết bảo mật tuyệt đối thông tin cá nhân của khách hàng. MTFood sử dụng các biện pháp bảo vệ thông tin cá nhân và tuân thủ chính sách bảo mật thông tin cá nhân được quy định. Thông tin cá nhân của khách hàng sẽ không được tiết lộ cho bất kỳ bên thứ ba nào mà không có sự đồng ý của khách hàng.\nNếu bạn có bất kỳ câu hỏi cụ thể nào về chính sách bảo mật thông tin cá nhân, hãy cho tôi biết để tôi có thể giúp bạn thêm thông tin."
+
   utter_faq/policy_return:
     - text: "Chính sách đổi trả sản phẩm của MTFood áp dụng trong một khoảng thời gian nhất định. Chỉ hỗ trợ trả hàng nếu quà tặng/sản phẩm mua kèm/sản phẩm mua theo gói còn nguyên mới và được gửi lại đầy đủ .\nNếu bạn có bất kỳ câu hỏi cụ thể nào về chính sách đổi trả sản phẩm, hãy cho tôi biết để tôi có thể giúp bạn thêm thông tin."
+
   utter_please_rephrase:
     - text: "Xin lỗi, tôi không hiểu câu hỏi của bạn. Bạn có thể cung cấp thông tin chi tiết hơn hoặc đặt câu hỏi khác được không? Tôi sẽ cố gắng giúp bạn."
+
   utter_ask_product_keyword:
     - text: "Bạn muốn tìm sản phẩm nào? Hãy cho tôi biết tên hoặc mô tả của sản phẩm bạn quan tâm, và tôi sẽ tìm giúp bạn."
+
   utter_not_understand_mention:
     - text: "Xin lỗi, tôi không hiểu được bạn đang quan tâm đến thông tin chi tiết cụ thể nào. Bạn có thể cung cấp thông tin chi tiết hơn hoặc đặt câu hỏi khác được không? Tôi sẽ cố gắng giúp bạn."
+
   utter_out_of_scope:
     - text: "Xin lỗi, tôi không hiểu câu hỏi của bạn. Bạn có thể cung cấp thông tin chi tiết hơn hoặc đặt câu hỏi khác được không? Tôi sẽ cố gắng giúp bạn."
 
